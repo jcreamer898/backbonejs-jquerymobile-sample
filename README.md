@@ -26,3 +26,5 @@ anvil --host --ci --browser
 This will run the demo app at `localhost:3080` in CI mode. Any time a file changes, the browser is automatically refreshed.
 
 The `--browser` flag causes the default browser to open pointed to the url.
+
+See the live demo here http://jcreamer898.github.com/backbonejs-jquerymobile-sample
