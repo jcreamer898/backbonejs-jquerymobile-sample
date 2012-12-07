@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="css/jquery.mobile-1.2.0.css" type="text/css" rel="stylesheet" />
+	<script src="js/vendor/jquery.min.js"></script>
+	<script>
+		$( document ).on( "mobileinit", function() {
+		    $.mobile.ajaxEnabled = false;
+		    $.mobile.linkBindingEnabled = false;
+		    $.mobile.hashListeningEnabled = false;
+		    $.mobile.pushStateEnabled = false;
+		});
+
+		$( document ).on( "pagehide", "div[data-role='page']", function ( event, ui ) {
+        	$( event.currentTarget ).remove();
+    	});
+	</script>
+	<script src="js/vendor/jquery.mobile-1.2.0.js"></script>
+	<script src="js/vendor/underscore-min.js"></script>
+	<script src="js/vendor/backbone-min.js"></script>
+	<script src="js/app.js"></script>
+
+	<script type="text/html" id="home">
+		<div data-role="content">
+			Hello world, the time is: <%= time %>
+			<a href="#about" data-role="button">About</a>
+		</div>
+	</script>
+
+	<script type="text/html" id="about">
+		<div data-role="content">
+			Jonathan Creamer, <a href="twitter.com/@jcreamer898">@jcreamer898</a>
+			<a href="#" data-role="button">Back Home</a>
+		</div>
+	</script>
+</head>
+<body>
+	<!-- Page will render here -->
+</body>
+</html>
